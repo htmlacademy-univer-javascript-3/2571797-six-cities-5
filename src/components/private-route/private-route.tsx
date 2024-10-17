@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
-import {AuthorizationStatus} from "../../enums/authorization-status/authorization-status.tsx";
-import {AppRoute} from "../../enums/app-route/app-route.tsx";
+import {AuthorizationStatus} from '../../enums/authorization-status/authorization-status.tsx';
+import {AppRoute} from '../../enums/app-route/app-route.tsx';
 
 
 type PrivateRouteProps = {
