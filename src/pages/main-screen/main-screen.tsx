@@ -1,5 +1,8 @@
 import {Offer} from '../../types/offer';
 import OffersList from '../offer-screen/offers-list.tsx';
+import { useState } from 'react';
+import { Map } from '../../components/map/map';
+import { Nullable } from 'vitest';
 
 
 type MainScreenProps = {
@@ -8,6 +11,7 @@ type MainScreenProps = {
 };
 
 function MainScreen({placesCount, offers}: MainScreenProps): JSX.Element {
+  const [activeOffer, setActiveOffer] = useState<Nullable<Offer>>(null);
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -119,10 +123,28 @@ function MainScreen({placesCount, offers}: MainScreenProps): JSX.Element {
                   </li>
                 </ul>
               </form>
-              <OffersList offers={offers}/>
+              <OffersList
+                offers={offers}
+                onActiveOfferChange={(offer: Nullable<Offer>) =>
+                  setActiveOffer(offer) }
+              />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"/>
+              <Map
+                city={offers[0].city}
+                points={offers.map((x) => ({
+                  location: x.location,
+                  id: x.id,
+                }))}
+                selectedPoint={
+                  activeOffer
+                    ? {
+                      location: activeOffer.location,
+                      id: activeOffer.id,
+                    }
+                    : undefined
+                }
+              />
             </div>
           </div>
         </div>
