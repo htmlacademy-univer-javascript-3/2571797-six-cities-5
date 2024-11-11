@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import {AuthorizationStatus} from '../../enums/authorization-status/authorization-status.tsx';
 import {AppRoute} from '../../enums/app-route/app-route.tsx';
 
@@ -9,10 +9,10 @@ type PrivateRouteProps = {
 };
 
 export function PrivateRoute(props: PrivateRouteProps): JSX.Element {
-  const { authorizationStatus, children } = props;
+  const {authorizationStatus, children} = props;
   return authorizationStatus === AuthorizationStatus.Auth ? (
     children
   ) : (
-    <Navigate to={AppRoute.Login} />
+    <Navigate to={AppRoute.Login}/>
   );
 }
