@@ -1,16 +1,14 @@
-import {State} from './index.ts';
-import {AuthorizationStatus} from '../mocks/login';
-import {NAMESPACE} from '../mocks/sliceHeaders';
-import {OfferDescription, OfferIdDescription} from '../types/offerDescription.ts';
-import {CommentList} from '../types/comment.ts';
+import {RootState} from './types';
 
-export const getAuthorizationStatus = (state: State): AuthorizationStatus => state[NAMESPACE.USER].authorizationStatus;
-export const getUserEmail = (state : State) : string => state[NAMESPACE.USER].userEmail;
-export const getOfferList = (state : State) : OfferDescription[] => state[NAMESPACE.DATA].offerlist;
-export const getComments = (state : State) : CommentList => state[NAMESPACE.DATA].comments;
-export const getOffer = (state : State) : OfferIdDescription => state[NAMESPACE.DATA].offer;
-const offerIsLoadingStatus = (state : State) : boolean => state[NAMESPACE.DATA].isOffersLoading;
-const userDataIsLoading = (state : State) : boolean => state[NAMESPACE.USER].isUserDataLoading;
-export const isLoading = offerIsLoadingStatus || userDataIsLoading;
-export const getCity = (state : State) : string => state[NAMESPACE.CITY].city;
-export const getOffersNearby = (state : State) : OfferDescription[] => state[NAMESPACE.DATA].nearbyOffers;
+const selectState = (state: RootState) => state;
+const selectCommonState = (state: RootState) => selectState(state).common;
+
+export const selectOffersReducerData = (state: RootState) => selectState(state).offers;
+export const selectOfferInfoReducerData = (state: RootState) => selectState(state).offerInfo;
+export const selectNearestOffersReducerData = (state: RootState) => selectState(state).nearestOffers;
+export const selectFavoriteOffersReducerData = (state: RootState) => selectState(state).favoriteOffers;
+export const selectAuthReducerData = (state: RootState) => selectState(state).auth;
+export const selectCommentsReducerData = (state: RootState) => selectState(state).comments;
+
+export const selectCityName = (state: RootState) => selectCommonState(state).city;
+export const selectSortVariant = (state: RootState) => selectCommonState(state).sortVariant;
