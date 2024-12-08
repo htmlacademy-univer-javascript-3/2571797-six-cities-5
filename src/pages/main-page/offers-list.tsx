@@ -1,6 +1,6 @@
 import { Nullable } from 'vitest';
-import { Offer } from '../../types/offer';
-import OfferCard from './offers-card.tsx';
+import OfferCard from './offer-card';
+import {Offer} from '../../types/offer.ts';
 
 type OfferListProps = {
   offers: Offer[];
@@ -25,4 +25,5 @@ function OffersList({
     </div>
   );
 }
+
 export default OffersList;
