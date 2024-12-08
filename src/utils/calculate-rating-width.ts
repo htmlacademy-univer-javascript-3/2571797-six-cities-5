@@ -1,3 +1,1 @@
-export const calculateRatingWidth = (rating: number): string => {
-	return `${rating * 20}%`;
-};
+export const calculateRatingWidth = (rating: number): string => `${rating * 20}%`;

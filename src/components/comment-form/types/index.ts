@@ -1,4 +1,4 @@
 export type CommentFormState = {
-	rating: string;
-	review: string;
+  rating: string;
+  review: string;
 };
