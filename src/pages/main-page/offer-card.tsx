@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom';
-import {Offer} from '../../types/offer';
+import { Link } from 'react-router-dom';
+import {Offer} from '../../types/offer.ts';
 
 function OfferCard(props: Offer): JSX.Element {
   const highestRating = 5;
@@ -36,7 +36,7 @@ function OfferCard(props: Offer): JSX.Element {
             type="button"
           >
             <svg className="place-card__bookmark-icon" width={18} height={19}>
-              <use xlinkHref="#icon-bookmark"/>
+              <use xlinkHref="#icon-bookmark" />
             </svg>
             <span className="visually-hidden">
               {props.isFavorite ? 'In bookmarks' : 'To bookmarks'}

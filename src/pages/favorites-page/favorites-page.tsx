@@ -1,8 +1,8 @@
-import {Offer} from '../../types/offer';
-import FavoritesList from './favorites-list.tsx';
+import FavoritesList from './favorites-list';
+import {Offer} from '../../types/offer.ts';
 
-function FavoritesScreen(props: { offers: Offer[] }): JSX.Element {
-  const {offers} = props;
+function FavoritesPage(props: { offers: Offer[] }): JSX.Element {
+  const { offers } = props;
   return (
     <div className="page">
       <header className="header">
@@ -47,7 +47,7 @@ function FavoritesScreen(props: { offers: Offer[] }): JSX.Element {
         <div className="page__favorites-container container">
           <section className="favorites">
             <h1 className="favorites__title">Saved listing</h1>
-            <FavoritesList offers={offers}/>
+            <FavoritesList offers={offers} />
           </section>
         </div>
       </main>
@@ -66,4 +66,4 @@ function FavoritesScreen(props: { offers: Offer[] }): JSX.Element {
   );
 }
 
-export default FavoritesScreen;
+export default FavoritesPage;

@@ -1,8 +1,8 @@
-import {Offer} from '../../types/offer';
-import FavoritesCard from './favorites-card.tsx';
+import FavoritesCard from './favorites-card';
+import {Offer} from '../../types/offer.ts';
 
 function FavoritesList(props: { offers: Offer[] }): JSX.Element {
-  const {offers} = props;
+  const { offers } = props;
   return (
     <>
       <ul className="favorites__list"></ul>
@@ -16,7 +16,7 @@ function FavoritesList(props: { offers: Offer[] }): JSX.Element {
         </div>
         <div className="favorites__places">
           {offers.map((offer) => (
-            <FavoritesCard offer={offer} key={offer.id}/>
+            <FavoritesCard offer={offer} key={offer.id} />
           ))}
         </div>
       </li>

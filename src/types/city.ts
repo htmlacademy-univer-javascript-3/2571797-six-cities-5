@@ -1,6 +1,7 @@
-import {Location} from './location';
+import { CityName } from '../consts';
+import { Location } from './location';
 
 export type City = {
-  name: string;
+  name: CityName;
   location: Location;
 };

@@ -1,4 +1,4 @@
-function MainEmptyScreen(): JSX.Element {
+function MainPageEmpty(): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -8,7 +8,7 @@ function MainEmptyScreen(): JSX.Element {
               <a className="header__logo-link header__logo-link--active">
                 <img
                   className="header__logo"
-                  src="/img/logo.svg"
+                  src="img/logo.svg"
                   alt="6 cities logo"
                   width={81}
                   height={41}
@@ -91,7 +91,7 @@ function MainEmptyScreen(): JSX.Element {
                 </p>
               </div>
             </section>
-            <div className="cities__right-section"/>
+            <div className="cities__right-section" />
           </div>
         </div>
       </main>
@@ -99,4 +99,4 @@ function MainEmptyScreen(): JSX.Element {
   );
 }
 
-export default MainEmptyScreen;
+export default MainPageEmpty;

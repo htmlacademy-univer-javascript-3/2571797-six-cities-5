@@ -1,6 +1,4 @@
-import CommentForm from './comment-form.tsx';
-
-function OfferScreen(): JSX.Element {
+function OfferNotLoggedPage(): JSX.Element {
   return (
     <div className="page">
       <header className="header">
@@ -25,15 +23,7 @@ function OfferScreen(): JSX.Element {
                     href="#"
                   >
                     <div className="header__avatar-wrapper user__avatar-wrapper"></div>
-                    <span className="header__user-name user__name">
-                      Oliver.conner@gmail.com
-                    </span>
-                    <span className="header__favorite-count">3</span>
-                  </a>
-                </li>
-                <li className="header__nav-item">
-                  <a className="header__nav-link" href="#">
-                    <span className="header__signout">Sign out</span>
+                    <span className="header__login">Sign in</span>
                   </a>
                 </li>
               </ul>
@@ -100,14 +90,14 @@ function OfferScreen(): JSX.Element {
                 </h1>
                 <button className="offer__bookmark-button button" type="button">
                   <svg className="offer__bookmark-icon" width={31} height={33}>
-                    <use xlinkHref="#icon-bookmark"/>
+                    <use xlinkHref="#icon-bookmark" />
                   </svg>
                   <span className="visually-hidden">To bookmarks</span>
                 </button>
               </div>
               <div className="offer__rating rating">
                 <div className="offer__stars rating__stars">
-                  <span style={{width: '80%'}}/>
+                  <span style={{ width: '80%' }} />
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="offer__rating-value rating__value">4.8</span>
@@ -191,7 +181,7 @@ function OfferScreen(): JSX.Element {
                     <div className="reviews__info">
                       <div className="reviews__rating rating">
                         <div className="reviews__stars rating__stars">
-                          <span style={{width: '80%'}}/>
+                          <span style={{ width: '80%' }} />
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>
@@ -206,11 +196,10 @@ function OfferScreen(): JSX.Element {
                     </div>
                   </li>
                 </ul>
-                <CommentForm/>
               </section>
             </div>
           </div>
-          <section className="offer__map map"/>
+          <section className="offer__map map" />
         </section>
         <div className="container">
           <section className="near-places places">
@@ -247,14 +236,14 @@ function OfferScreen(): JSX.Element {
                         width={18}
                         height={19}
                       >
-                        <use xlinkHref="#icon-bookmark"/>
+                        <use xlinkHref="#icon-bookmark" />
                       </svg>
                       <span className="visually-hidden">In bookmarks</span>
                     </button>
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style={{width: '80%'}}/>
+                      <span style={{ width: '80%' }} />
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -293,14 +282,14 @@ function OfferScreen(): JSX.Element {
                         width={18}
                         height={19}
                       >
-                        <use xlinkHref="#icon-bookmark"/>
+                        <use xlinkHref="#icon-bookmark" />
                       </svg>
                       <span className="visually-hidden">To bookmarks</span>
                     </button>
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style={{width: '80%'}}/>
+                      <span style={{ width: '80%' }} />
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -342,14 +331,14 @@ function OfferScreen(): JSX.Element {
                         width={18}
                         height={19}
                       >
-                        <use xlinkHref="#icon-bookmark"/>
+                        <use xlinkHref="#icon-bookmark" />
                       </svg>
                       <span className="visually-hidden">To bookmarks</span>
                     </button>
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style={{width: '100%'}}/>
+                      <span style={{ width: '100%' }} />
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -367,4 +356,4 @@ function OfferScreen(): JSX.Element {
   );
 }
 
-export default OfferScreen;
+export default OfferNotLoggedPage;

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 
 function CommentForm(): JSX.Element {
-  const [formState, setFormState] = useState({rating: 0, review: ''});
+  const [formState, setFormState] = useState({ rating: 0, review: '' });
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
-    const {name, value} = event.target;
-    setFormState({...formState, [name]: value});
+    const { name, value } = event.target;
+    setFormState({ ...formState, [name]: value });
   };
   return (
     <form className="reviews__form form" action="#" method="post">
@@ -28,7 +28,7 @@ function CommentForm(): JSX.Element {
           title="perfect"
         >
           <svg className="form__star-image" width={37} height={33}>
-            <use xlinkHref="#icon-star"/>
+            <use xlinkHref="#icon-star" />
           </svg>
         </label>
         <input
@@ -45,7 +45,7 @@ function CommentForm(): JSX.Element {
           title="good"
         >
           <svg className="form__star-image" width={37} height={33}>
-            <use xlinkHref="#icon-star"/>
+            <use xlinkHref="#icon-star" />
           </svg>
         </label>
         <input
@@ -62,7 +62,7 @@ function CommentForm(): JSX.Element {
           title="not bad"
         >
           <svg className="form__star-image" width={37} height={33}>
-            <use xlinkHref="#icon-star"/>
+            <use xlinkHref="#icon-star" />
           </svg>
         </label>
         <input
@@ -79,7 +79,7 @@ function CommentForm(): JSX.Element {
           title="badly"
         >
           <svg className="form__star-image" width={37} height={33}>
-            <use xlinkHref="#icon-star"/>
+            <use xlinkHref="#icon-star" />
           </svg>
         </label>
         <input
@@ -96,7 +96,7 @@ function CommentForm(): JSX.Element {
           title="terribly"
         >
           <svg className="form__star-image" width={37} height={33}>
-            <use xlinkHref="#icon-star"/>
+            <use xlinkHref="#icon-star" />
           </svg>
         </label>
       </div>
