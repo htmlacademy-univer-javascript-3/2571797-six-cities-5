@@ -26,7 +26,7 @@ const OfferPage = () => {
   useErrorHandling(error, handleNotFoundPageNavigate);
 
   return (
-    <main className="page__main page__main--offer">
+    <main className="page__main page__main--offer"> 
       <OfferInfo offerInfo={offerInfo} loading={loading}/>
       <NearestOffers offerInfo={offerInfo}/>
     </main>
