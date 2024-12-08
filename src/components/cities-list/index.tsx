@@ -1,7 +1,7 @@
 import {memo} from 'react';
 import {useActions, useAppSelector} from '../../store/hooks';
 import {CityTab} from '../city-tab';
-import {selectCityName} from '../../store/selectors';
+import {selectCityName} from '../../store/selectors'; 
 import {CITIES as citiesList} from '../../constants/cities.ts';
 import type {Cities} from '../../types/cities';
 
