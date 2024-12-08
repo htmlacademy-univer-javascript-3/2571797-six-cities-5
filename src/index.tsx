@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { OffersMock } from './mocks/offers';
-import { Provider } from 'react-redux';
-import { store } from './store';
-import App from './components/app/app.tsx';
+import {Provider} from 'react-redux';
+import App from './components/App.tsx';
+import {guestReview} from './mocks/review.js';
+import {store} from './store';
+import {fetchOffers} from './store/apiActions.ts';
+
+store.dispatch(fetchOffers());
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App offers={OffersMock} />
+      <App guestReview={guestReview}/>
     </Provider>
   </React.StrictMode>
 );
