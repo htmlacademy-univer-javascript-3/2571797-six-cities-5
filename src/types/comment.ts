@@ -1,19 +1,18 @@
-export type Comment =
-{
-    id: string;
-    date: string;
-    user: {
-    name: string;
-    avatarUrl: string;
-    isPro: boolean;
-    };
-    comment: string;
-    rating: number;
+export type CommentAuthor = {
+  name: string;
+  avatarUrl: string;
+  isPro: boolean;
 };
-export type CommentList = Comment[];
-export type CommentPost =
-{
-    rating:number;
-    comment:string;
-    id: string;
-}
+
+export type Comment = {
+  id: string;
+  date: string;
+  user: CommentAuthor;
+  comment: string;
+  rating: number;
+};
+
+export type CommentFormState = {
+  rating: number;
+  comment: string;
+};
