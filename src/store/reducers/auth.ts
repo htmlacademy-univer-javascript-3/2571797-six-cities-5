@@ -27,7 +27,10 @@ const initialState: AuthState = {
   }
 };
 
-const setValidationErrors = (details: ErrorResponse['details']): Record<string, string> | undefined => details?.reduce((errors, {property, messages}) => {
+const setValidationErrors = (details: ErrorResponse['details']): Record<string, string> | undefined => details?.reduce((errors, {
+  property,
+  messages
+}) => {
   (errors as { [key: string]: string })[property] = messages[0][0].toUpperCase() + messages[0].slice(1);
   return errors;
 }, {});
