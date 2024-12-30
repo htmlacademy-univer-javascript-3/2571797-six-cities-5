@@ -56,7 +56,7 @@ export const Header = ({withNav = true}: Props) => {
                 ) : (
                   <li className="header__nav-item">
                     <Link className="header__nav-link" to={AppRoutes.Login}>
-                      <span className="header__signout">Sign in</span>
+                      <span className="header__login">Sign in</span>
                     </Link>
                   </li>
                 )}

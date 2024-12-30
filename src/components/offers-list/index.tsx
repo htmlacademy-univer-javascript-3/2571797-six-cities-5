@@ -21,7 +21,7 @@ export const OffersList = memo(({offers, type = 'default', onOfferHover}: Props)
 
   return (
     <div className={calculateClassName(type)}>
-      {offers.length && offers.map((offer) => <OfferCard key={offer.id} previewType={type} offer={offer} onHover={onOfferHover}/>)}
+      {offers.length && offers.map((offer) => (<OfferCard key={offer.id} previewType={type} offer={offer} onHover={onOfferHover}/>))}
     </div>
   );
 });
